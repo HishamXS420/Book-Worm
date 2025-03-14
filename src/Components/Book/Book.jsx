@@ -1,7 +1,7 @@
 import { Link } from "react-router";
 
 const Book = ({ book }) => {
-  const {bookId, image, bookName, author, tags, category ,rating} = book;
+  const {bookId, image, bookName, author, tags, category ,rating, totalPages} = book;
 
   return (
     // এগুলোর media query / responsive করতে হলে সেটা parent এ করতে হবে
@@ -38,7 +38,7 @@ const Book = ({ book }) => {
         <p>Published by: {author}</p>
         {/* Dotted underline used as a divider */}
         <div className="border-t-1 border-dashed my-4 text-gray-600"></div>
-
+          <div className="text-xl font-semibold mb-4 ">Pages: {totalPages}</div>
         <div className="card-actions justify-between">
           <div className="badge badge-outline">{category}</div>
           <div className="flex gap-2 items-center">
